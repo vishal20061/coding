@@ -1,0 +1,63 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.mainFun{
+    border: 5px solid black;
+    border-radius: 5px;
+    height: 35vh;
+    width: 48vh;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-top: 16%;
+    background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+    column-gap:18px ;
+}
+button{
+    height: 8vh;
+    width: 12vh;
+    font-size: larger;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    scale: 1;
+}
+button:hover{
+    scale: 1.1;
+}
+button:active{
+    scale: 0.95;
+}
+.btn1{
+    background-color: red;
+}
+.btn2{
+    background-color: blue;
+}
+.btn3{
+    background-color: green;
+}
+.btn4{
+    background-color: rgb(0, 0, 0);
+}
+.btn5{
+    background-color: gray;
+}
+.btn6{
+    background-color: yellow;
+}
+.btn7{
+    background-color: pink;
+}
+.btn8{
+    background-color: orange;
+}
+.btn9{
+    background-color: brown;
+}
