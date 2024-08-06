@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <h1 class="cal">Calculator</h1>
+    <div class="main">
+        <input type="text" class="number" placeholder="0" id="input">
+            <div class="delete">
+                <button class="btn" onclick="solve()" style="color:rgb(255, 255,0) ;">=</button>
+                <button class="btn" onclick="AC()" style="color:rgb(255,255,0)">AC</button>
+            </div>
+            <div>
+               <button onclick="pick(1)" value="1">1</button>
+               <button onclick="pick(2)" value="2">2</button>
+               <button onclick="pick(3)" value="3">3</button>
+               <button class="operater" onclick="pick('+')" value="+">+</button>
+            </div>
+            <div >
+               <button onclick="pick(4)" value="4">4</button>
+               <button onclick="pick(5)" value="5">5</button>
+               <button onclick="pick(6)" value="6">6</button>
+               <button class="operater" onclick="pick('-')" value="-">-</button>
+            </div>
+            <div >
+                <button onclick="pick(7)" value="7">7</button>
+                <button onclick="pick(8)" value="8">8</button>
+                <button onclick="pick(9)" value="9">9</button>
+                <button class="operater" onclick="pick('*')" value="*">*</button>
+            </div>
+            <div >
+                <button onclick="pick('00')" class="operater">00</button>
+                <button onclick="pick(0)">0</button>
+                <button onclick="pick('.')" class="operater">.</button>
+                <button class="operater" onclick="pick('/')">/</button>
+            </div>
+    </div>
+    <script>
+        function pick(val){
+            document.getElementById('input').value += val;
+        }
+        function solve() {
+            let x = document.querySelector('input').value;
+            let y = eval(x);
+            document.querySelector('input').value = y;
+        }
+        function AC() {
+            document.getElementById("input").value ="";
+        }
+    </script>
+</body>
+</html>
