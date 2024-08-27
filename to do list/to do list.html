@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background: linear-gradient(135deg , #6434d3, #ab47d3);
+        }
+        .container{
+            border: 2px solid white;
+            top: 60%;
+            left: 50%;
+            width: 40%;
+            min-width:450px;
+            position:relative;
+            transform: translate(-50%,-50%);
+            padding: 30px 40px;
+            border-radius: 10px;
+            
+        }
+        #newtask{
+            background-color: #ffff;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+        }
+        #newtask input{
+            outline: none;
+            height: 7vh;
+            width:75%;
+            border-radius: 4px;
+            font-size: 2.5vh;
+            padding-left:20px ;
+            text-align:center;
+        }
+        #newtask input:focus{
+            outline: none;
+            border-color: #4f12de;
+        }
+
+        #newtask button{
+            height: 7vh;
+            width:23%;
+            border-radius: 6px;
+            border: none;
+            background-color: blue;
+            color: white;
+            font-size:3vh;
+        }
+
+        .tasks{
+            background-color: #ffff;
+            border-radius: 10px ;
+            padding: 30px 20px ;
+            margin-top: 60px;
+            width: 100%;
+            position:relative;
+        }
+        .new{
+            font-size: 3vh;
+            border-bottom: 2px solid black;
+            padding-top:12px ;
+            display: flex;
+            justify-content: space-between;
+            align-items:flex-end;
+            cursor: pointer;
+        }
+        .del{
+            height:7vh ;
+            width:23% ;
+            border-radius: 6px;
+            background-color: #4c00ff;
+            color:white;
+            border: none;
+            font-size: 3vh;
+            margin-bottom: 3px;
+        }
+        .complete{
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" placeholder="to be countinue...">
+            <button id="push"> Add </button>
+        </div>
+        <div class="tasks"></div>
+    </div>
+    <script src="to do list.js"></script>
+</body>
+</html>
