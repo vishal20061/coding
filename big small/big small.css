@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    text-align: center;
+    background-color: rgb(142,202,230);
+}
+h1{
+    background-color:rgb(2, 48, 71);
+    height:12vh;
+    line-height: 12vh;
+    color: rgb(251,133,0);
+    font-size:7vh;
+}
+h3{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+    margin-top: 30px;
+    font-size: 35px;
+}
+.pic{
+    height:20vh;
+    width: 20vh;
+    border: 2px solid black;
+    font-size: xx-large;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    line-height:20vh;
+    background-color: rgb(255,183,3);
+}
+.pic:hover{
+   transform: scale(1.1);
+   cursor: pointer;
+}
+.pic:active{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 12vh;
+}
+.msg{
+    font-size: x-large;
+    background-color: white;
+    display: inline-block;
+    padding:10px;
+    border-radius: 10px;
+}
+.msg-container{
+    margin-top: 40px;
+}
+.btn{
+    width:20vh;
+    height:6vh;
+    font-size: 20px;
+    border: none;
+    margin-top: 35px;
+    border-radius: 10px;
+    background-color: rgb(103, 255, 126);
+    
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+.btn:active{
+    transform: scale(0.9);
+}
+.input{
+    width:35vh;
+    height: 5vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size:3vh;
+    text-align: end;
+    padding-right:20px ;
+    margin-top: 30px;
+}
+.input:active{
+    border: none;
+}
+.input::-webkit-inner-spin-button{
+    display: none;
+}
