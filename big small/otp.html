@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="otp.css">
+</head>
+<body>
+    <form id="form">
+        <div class="field">
+          <input type="text" name="otp" id="otp">
+        </div>
+        <div class="field">
+          <label for="sender"></label>
+          <input type="text" name="sender" id="sender" placeholder="Enter Email address...">
+        </div>
+
+        <div id="vari-count">
+          <input type="number" id="num" placeholder="Enter OTP">
+          <input type="button" id="otp-btn" value="varify">
+        </div>
+      
+        <input type="submit" id="btn" value="Send Email" >
+
+        <div id="anybuttons">
+          <input type="button" value="reset" id="reset">
+          <a href="big small.html"><input type="button" value="next" id="next"></a>
+        </div>
+      </form>
+      
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      
+      <script type="text/javascript">
+        emailjs.init('W8jJ9N4VcQINmp9MA')
+      </script>
+      <script>
+        const btn = document.getElementById('btn');
+        const otp = document.querySelector("#otp");
+        const sender = document.getElementById("sender");
+        const num = document.getElementById("num");
+        const otp_btn = document.getElementById("otp-btn");
+        const variCount = document.getElementById("vari-count");
+        const anybuttons = document.getElementById("anybuttons");
+        const reset = document.getElementById("reset");
+        
+
+      let otp_val = Math.floor(Math.random()*9000+1000)
+        otp.value = otp_val;
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+          event.preventDefault();
+
+       btn.value = 'Sending...';
+
+      const serviceID = 'default_service';
+      const templateID = 'template_nlc0xjt';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+      variCount.style.display = "flex"
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+  });
+  
+  otp_btn.onclick = function(){
+    if (num.value == otp_val) {
+      alert("otp varified");
+      `<link href = ${"index.html"}>`
+      // location.reload();
+      anybuttons.style.display = "flex";
+      btn.style.display = "none"
+      reset.onclick = function(){
+        sender.value = "";
+        num.value = "";
+        location.reload();
+        anybuttons.style.display = "none"
+        btn.style.display = "flex";
+        variCount.style.display = "none"
+      }
+    }
+    else{
+      alert("please try again");
+      num.value = "";
+      // sender.value = "";
+    }
+    }
+      </script>
+</body>
+</html>
