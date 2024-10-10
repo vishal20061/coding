@@ -1,0 +1,89 @@
+body{
+    /* background:linear-gradient(135deg,#00feba,#5b548a); */
+    background-color: white;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+nav > input{
+    height:3em;
+    width: 15em;
+    outline: none;
+    border-radius: 30px;
+    border: none;
+    padding-left: 20px;
+    font-size: 20px;
+    text-align: start;
+}
+ button {
+    height: 2.7em;
+    width: 6em;
+    border-radius: 10px;
+    border: 2px;
+    font-size: 20px;
+    
+}
+button:active{
+    transform: scale(0.9);
+}
+button:hover{
+    animation: full-fill 5s infinite linear normal;
+    animation-delay: 0.5s;
+    color: red;
+    cursor: pointer;
+}
+@keyframes full-fill{
+    0%{
+        background-color: rgb(255, 255, 255);
+    }
+    30%{
+        background-color: rgb(255, 255, 0);
+    }
+    80%{
+        background-color: rgb(0, 38, 255);             
+    }
+    100%{
+        background-color: rgb(255, 255, 255);
+    }
+}
+.main{
+    border: 2px solid black;
+    width:max-content ;
+    padding: 30px 40px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    background: linear-gradient(135deg,#00feba,#5b548a);
+    border-radius: 10px;
+    box-shadow: 40px 40px 40px 40px rgba(0,0,0,0.3);
+}
+.wind-humidity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img{
+    height: 37px;
+    margin-right: 9px;
+}
+span{
+    font-size: 36px;
+}
+h1{
+    font-size: 4em;
+    margin-top: 0%;
+    margin-bottom: 10px;
+}
+h2{
+    font-size: 3em;
+    margin-top: 0%;
+    margin-bottom:20px;
+}
+p{
+    font-size: 1.3em;
+    margin-top: 0%;
+}
+#weather{
+    display: none;
+}
